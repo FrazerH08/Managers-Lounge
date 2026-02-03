@@ -1,19 +1,19 @@
-body{
-      font-family: "Montserrat", sans-serif;
-      font-optical-sizing: auto;
-      font-weight: weight;
-      font-style: normal;
+body {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
     background-color: #202537;
     color: #FFFFFF;
+}
 
-    
-}
 nav a:hover {
-  color: #D18EFB;
-  text-decoration: underline;
+    color: #D18EFB;
+    text-decoration: underline;
 }
+
 nav {
-  text-decoration: none;
+    text-decoration: none;
     border-radius: 5px;
     border: 3px solid #D18EFB;
     background: none;
@@ -22,6 +22,7 @@ nav {
     width: 99.1%;
     height: fit-content;
 }
+
 nav a {
     color: white;
     text-decoration: none;
@@ -35,56 +36,68 @@ ul {
     overflow: hidden;
 }
 
-
-
 li a {
     display: block;
     text-align: center;
-    padding: 35px;
-    margin: 25px;
+    padding: 30px;
+    margin: 20px;
 }
 
-
-
-h2{
-  font-weight: 300;
+h2 {
+    font-weight: 300;
 }
 
 .title {
-  text-align: center;
+    text-align: center;
 }
 
 .opening-paragraph {
-  text-align: center;
+    text-align: center;
 }
-.btn a {
-  text-decoration: none;
 
+.btn a {
+    text-decoration: none;
 }
+
 .container {
-  display: grid;
-  column-gap: 10px;
-  grid-template-columns: auto auto;
-  background-color: none ;
-  padding: 10px;
+    display: grid;
+    column-gap: 10px;
+    grid-template-columns: auto auto;
+    background-color: none;
+    padding: 10px;
 }
 
 .container div {
-  padding: 20px;
-  font-size: 30px;
-  text-align: center;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
 }
 
 .btn {
-  border: 3px solid #D18EFB;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-  padding: 10px 24px;
-  color: #FFFFFF;
-  transition-duration: 0.4s;
+    border: 3px solid #D18EFB;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 10px 24px;
+    color: #FFFFFF;
+    transition-duration: 0.4s;
 }
 
-.btn:hover{
-  background-color: #D18EFB;
+.btn:hover {
+    background-color: #D18EFB;
+}
+
+footer {
+    border: 3px solid #D18EFB;
+    padding: 10px;
+    font-size: larger;
+}
+
+footer a {
+    color: white;
+}
+
+.test-img {
+    border-radius: 5px;
+    border-color: 3px solid #D18EFB;
 }
