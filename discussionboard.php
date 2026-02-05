@@ -10,7 +10,7 @@ if(isset($_POST['submit'])){
     $search = $_POST['search'];
     
     // Prepared statement for safer search
-    $stmt = $conn->prepare("SELECT * FROM news WHERE title LIKE ? ORDER BY time_created DESC");
+    $stmt = $conn->prepare("SELECT * FROM discussion_board WHERE title LIKE ? ORDER BY time_created DESC");
     $searchTerm = "%$search%"; 
     $stmt->bind_param("s", $searchTerm);
     $stmt->execute();
@@ -21,9 +21,9 @@ if(isset($_POST['submit'])){
     }
 }
 
-// If no search was sucessfuly performed, fetch all articles
+// If no search was successfully performed, fetch all articles
 if (empty($news)) {
-    $stmt = $conn->prepare("SELECT * FROM news ORDER BY time_created DESC");
+    $stmt = $conn->prepare("SELECT * FROM discussion_board ORDER BY time_created DESC");
     $stmt->execute();
     $result = $stmt->get_result();
     
