@@ -1,0 +1,46 @@
+form {
+    text-align: center;
+    font-size: larger;
+}
+
+p {
+    text-align: center;
+    color: white;
+    font-size: larger;
+}
+
+.box {
+    border: 3px solid #D18EFB;
+    font-size: large;
+    padding: 0.5%;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+input {
+    background-color: #202537;
+    color: white;
+}
+
+.signupbtn {
+    border: 3px solid #D18EFB;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 10px 68px;
+    color: #FFFFFF;
+    transition-duration: 0.4s;
+    background-color: #202537;
+    font-size: large;
+}
+
+.signupbtn:hover{
+    background-color: #D18EFB;
+}
+
+p a {
+    color: white;
+}
