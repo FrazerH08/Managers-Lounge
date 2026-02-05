@@ -23,7 +23,7 @@
                 <h2><a href="listguides.php">Guides</a></li>
             </h2>
             <li>
-                <h2><a href="index.html">Discussion Board</a></li>
+                <h2><a href="discussionboard.php">Discussion Board</a></li>
             </h2>
             <li>
                 <h2><a class="right-float" href="login.php">Login</a></li>
