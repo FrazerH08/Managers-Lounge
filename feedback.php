@@ -11,25 +11,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Cambo&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-        <nav>
+    <nav>
         <ul>
             <li>
                 <h1><a href="index.html">Managers Lounge</a></h1>
             </li>
             <li>
-                <h2><a href="index.html">Latest News</a></li>
+                <h2><a href="listnews.php">Latest News</a></li>
             </h2>
             <li>
-                <h2><a href="index.html">Guides</a></li>
+                <h2><a href="listguides.php">Guides</a></li>
             </h2>
             <li>
                 <h2><a href="index.html">Discussion Board</a></li>
             </h2>
             <li>
-                <h2><a class="right-float" href="index.html">Login</a></li>
+                <h2><a class="right-float" href="login.php">Login</a></li>
             </h2>
             <li>
-                <h2><a class="right-float" href="index.html">Sign Up</a></li>
+                <h2><a class="right-float" href="signup.php">Sign Up</a></li>
             </h2>
         </ul>
     </nav>

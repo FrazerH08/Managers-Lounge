@@ -1,0 +1,22 @@
+.login-form {
+    text-align: center;
+}
+
+.remember-me {
+    margin-top: 2%;
+}
+
+.signup {
+    font-size: x-large;
+}
+
+p {
+    font-size: large;
+    text-align: center;
+}
+
+input {
+    background-color: #202537;
+    color: white;
+    border: 3px solid #D18EFB;
+}

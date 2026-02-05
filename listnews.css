@@ -1,0 +1,99 @@
+a {
+    color: white;
+}
+
+img {
+    width: auto;
+    height: 50%;
+}
+
+.search-btn {
+    text-align: center;
+    border: 3px solid #D18EFB;
+    padding: 10px 69px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    background-color: #202537;
+    display: inline-block;
+    font-size: 120%;
+    transition-duration: 0.4s;
+}
+
+.search-btn a {
+    color: white;
+    text-decoration: none;
+}
+
+.search-btn:hover {
+    background-color: #D18EFB;
+    color: white;
+}
+
+.refresh:hover a {
+    color: white;
+}
+
+.search-button input {
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: larger;
+    border: 3px solid #D18EFB;
+}
+
+.search-button button {
+    text-align: center;
+    padding: 5px 14px;
+    border: 3px solid #D18EFB;
+    background-color: #202537;
+    cursor: pointer;;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 120%;
+    transition-duration: 0.4s;
+    color: white;
+}
+
+.search-button button:hover {
+    background-color: #D18EFB;
+    color: white;
+}
+
+.postCard {
+    display: grid;
+}
+
+.article-image {
+    width: auto;
+    height: 50%;
+}
+
+.rumoursbtn {
+    text-align: right;
+    border: 2px solid #EE0A0E;
+    padding: 10px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: white;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    font-size: 120%;
+    transition-duration: 0.4s;
+}
+
+.rumoursbtn:hover {
+    background-color: #EE0A0E;
+    color: white;
+}
+
+.listnews-smaller-article-image {
+    width: 40%;
+    height: 40%;
+}
+
+.welcome-message{
+    text-align: center;
+    font-size: large;
+}
