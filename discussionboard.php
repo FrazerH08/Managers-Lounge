@@ -72,7 +72,7 @@ if (empty($news)) {
 <p class="welcome-message"> This page contains Tips , discussions  and shared tactics <br> regarding Football Manager , written by our lovely community! <br> Enjoy <b>Managers! </b> </p>
 <?php
 if ($logged_in) {
-    echo '<a href="news_upload.php" class="content-creatorbtn">Create Thread</a>';
+    echo '<a href="news_upload.php" class="btn">Create Thread</a>';
 }
      
 ?>

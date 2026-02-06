@@ -81,6 +81,7 @@ h2 {
     padding: 10px 24px;
     color: #FFFFFF;
     transition-duration: 0.4s;
+    font-weight: bold;
 }
 
 .btn:hover {
@@ -140,4 +141,12 @@ a{
 
 button {
     font-family: "Montserrat", sans-serif;
+}
+
+#pictureup {
+    display: none;
+}
+
+label {
+    font-weight: bold;
 }

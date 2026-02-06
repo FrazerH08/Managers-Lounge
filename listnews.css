@@ -5,6 +5,8 @@ a {
 img {
     width: auto;
     height: 50%;
+    border: 3px solid #D18EFB;
+    border-radius: 5px;
 }
 
 .search-btn {
@@ -96,4 +98,16 @@ img {
 .welcome-message{
     text-align: center;
     font-size: large;
+}
+
+/*section{
+    text-align: center;
+}
+*/
+.article-title{
+    text-align: center;
+    font-size: larger;
+}
+.article-title b{
+    text-align: center;
 }

@@ -72,7 +72,7 @@ if (empty($news)) {
 <p class="welcome-message"> This page contains Latest Guides regarding Football Manager, <br> written by our lovely Admins! <br> Enjoy <b>Managers! </b> </p>
 <?php
 if($role === 'admin'){
-    echo '<a href="news_upload.php" class="content-creatorbtn">Create Guide</a>'; 
+    echo '<a href="guides_upload.php" class="btn">Create Guide</a>'; 
 }
 ?>
 <br> <br>

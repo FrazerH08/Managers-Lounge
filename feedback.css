@@ -25,13 +25,14 @@ input[type=submit] {
     display: inline-block;
     font-size: 120%;
     transition-duration: 0.4s;
+    font-family: "Montserrat", sans-serif ;
+    font-weight: bold;
 }
-
 input[type=submit]:hover {
     background-color: #D18EFB;
     color: white;
-}
 
+}
 .container {
     border-radius: 5px;
     padding: 20px;
@@ -45,3 +46,4 @@ h1 {
 label {
     font-weight: bold;
 }
+

@@ -46,7 +46,6 @@
         <div class="next">
             <button type="submit" name= "submit" value="submit" class="signupbtn" >Login</button>
         </div>
-        <p class="signup"> Need to sign up? <a href="signup.php"> Register now</a></p>
     </form>
 
     <p>If you don't have an account already then please <a href="signup.php"> Sign up </a> to improve your experience.</p>
@@ -54,6 +53,8 @@
     if(isset($_POST['submit'])){
         $username =mysqli_real_escape_string($conn,$_POST['username']);
         $password =mysqli_real_escape_string($conn,$_POST['password']);
+
+        // Use Prepared Statements... e.g. $SQL = "insert your query" then use bind and then execute
 
         $result = mysqli_query($conn,"SELECT * FROM users WHERE username='$username' AND password='$password'") or die("Error");
         $row = mysqli_fetch_assoc($result);
