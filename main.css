@@ -133,3 +133,11 @@ a{
     color: white ;
     
 }
+
+.accvalid{
+    text-align: center;
+}
+
+button {
+    font-family: "Montserrat", sans-serif;
+}

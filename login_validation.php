@@ -35,6 +35,7 @@
     </nav>
     <?php
     include 'connectdb.php';
+    session_start();
     if(isset($_POST['submit'])){
     $username = mysqli_real_escape_string($conn, $_POST['username']);
     $password = $_POST['password'];
@@ -65,7 +66,7 @@
         // Add debugging
         // echo "Debug - Session username set: " . $_SESSION['username'];
 
-        header("Location: index.html");
+        header("Location: loginsuccess.php");
         exit();
     } else {
         echo "<h1 class='title'>Invalid username or password</h1>";
@@ -75,4 +76,7 @@
         ?>
 </body>
 </html>
+<script>
+    console.log("Validation script has ran")
 
+</script>
