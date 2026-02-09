@@ -5,8 +5,8 @@ session_start();
 $logged_in = $_SESSION['logged_in'];
 $role = $_SESSION['role'];
 
-if($role != 'admin' || $logged_in == false) {
-    header(header:"Location: listguides.php");
+if($logged_in == false) {
+    header(header:"Location: discussionboard.php");
 }
 
 ?>
@@ -15,7 +15,7 @@ if($role != 'admin' || $logged_in == false) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Guide </title>
+    <title>Create Thread </title>
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="feedback.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,16 +45,16 @@ if($role != 'admin' || $logged_in == false) {
             </h2>
         </ul>
     </nav>
-<h1><u>Create Guide</u></h1>
+<h1><u>Create Thread</u></h1>
     <div class="formcss">
-    <form action="add_guides_validate.php" method="post" enctype="multipart/form-data">
+    <form action="add_threads_validate.php" method="post" enctype="multipart/form-data">
     <label for="title">Title: </label><br>
-        <input type="text" name="title" id="title" placeholder="New Guide Title" size="50" required>
+        <input type="text" name="title" id="title" placeholder="New Thread Title" size="50" required>
         <br>
         <label for="description_txt">Description: </label><br>
-        <textarea name="description" id="description_txt" cols="100" rows="10" placeholder="New Guide Description" required></textarea><br>
+        <textarea name="description" id="description_txt" cols="100" rows="10" placeholder="New Thread Description" required></textarea><br>
         <label for="content">Content: </label><br>
-        <textarea name="content" id="content" cols="180" rows="26" placeholder="Enter Guide Content" required></textarea>
+        <textarea name="content" id="content" cols="180" rows="26" placeholder="Enter Thread Content" required></textarea>
         <br>
         <input type="submit" class="btn" onclick="alert('Thanks for submitting!')"></input>
         <label for="pictureup" class="btn">Choose Image </label>

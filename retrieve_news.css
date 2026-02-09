@@ -1,0 +1,18 @@
+section {
+    text-align: left;
+}
+
+img {
+    margin-top: 1%;
+    width: 20%;
+    height: 20%;
+    border: 3px solid  #D18EFB;
+    border-radius: 5px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+textarea {
+    font-size: 150%;
+}
+

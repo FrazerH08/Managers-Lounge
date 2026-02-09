@@ -93,12 +93,12 @@ if($role === 'admin'){
                   if (!empty($row['picture'])) {
                     echo '<img src="' . htmlspecialchars($row['picture']) . '" alt="Guide image" class="listnews-article-image">' . '<br>';
                 }
-                echo '<p><a href="retrieve_news.php?id=' . htmlspecialchars($row['id']) . '">' . '<br>',  htmlspecialchars($row['title']) . '</a></p>';
+                echo '<p><a class=article-title href="retrieve_guides.php?id=' . htmlspecialchars($row['id']) . '">' .  '<b>', htmlspecialchars($row['title']) . '</b>' , '</a></p>';
 
                 if($role === 'admin'){
                     echo '<p>
-                        <a href="edit_news.php?id=' . htmlspecialchars($row['id']) . '">Edit</a> |
-                        <a onclick="return confirm(\'Do You Really Want To Delete This?\')" href="delete_news.php?id=' . htmlspecialchars($row['id']) . '">Delete</a>
+                        <a class=btn href="edit_news.php?id=' . htmlspecialchars($row['id']) . '">Edit</a> |
+                        <a class=btn onclick="return confirm(\'Do You Really Want To Delete This?\')" href="delete_news.php?id=' . htmlspecialchars($row['id']) . '">Delete</a>
                     </p>';
                 }
 

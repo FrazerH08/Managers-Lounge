@@ -72,9 +72,8 @@ if (empty($news)) {
 <p class="welcome-message"> This page contains Tips , discussions  and shared tactics <br> regarding Football Manager , written by our lovely community! <br> Enjoy <b>Managers! </b> </p>
 <?php
 if ($logged_in) {
-    echo '<a href="news_upload.php" class="btn">Create Thread</a>';
+    echo '<a href="thread_upload.php" class="btn">Create Thread</a>';
 }
-     
 ?>
 <br> <br>
 <br>
@@ -94,12 +93,12 @@ if ($logged_in) {
                   if (!empty($row['picture'])) {
                     echo '<img src="' . htmlspecialchars($row['picture']) . '" alt="Thread image" class="listnews-article-image">' . '<br>';
                 }
-                echo '<p><a href="retrieve_news.php?id=' . htmlspecialchars($row['id']) . '">' . '<br>',  htmlspecialchars($row['title']) . '</a></p>';
+                echo '<p><a class=article-title href="retrieve_thread.php?id=' . htmlspecialchars($row['id']) . '">' .  '<b>', htmlspecialchars($row['title']) . '</b>' , '</a></p>';
 
                 if($role === 'admin'){
                     echo '<p>
-                        <a href="edit_news.php?id=' . htmlspecialchars($row['id']) . '">Edit</a> |
-                        <a onclick="return confirm(\'Do You Really Want To Delete This?\')" href="delete_news.php?id=' . htmlspecialchars($row['id']) . '">Delete</a>
+                        <a class =btn href="edit_news.php?id=' . htmlspecialchars($row['id']) . '">Edit</a> |
+                        <a class=btn onclick="return confirm(\'Do You Really Want To Delete This?\')" href="delete_news.php?id=' . htmlspecialchars($row['id']) . '">Delete</a>
                     </p>';
                 }
 
