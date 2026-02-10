@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 09, 2026 at 02:46 PM
+-- Generation Time: Feb 09, 2026 at 04:29 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -20,31 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `managers-lounge`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `comments`
---
-
-CREATE TABLE `comments` (
-  `id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
-  `news_id` int(11) NOT NULL,
-  `text` text NOT NULL,
-  `date_created` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `comments`
---
-
-INSERT INTO `comments` (`id`, `user_id`, `news_id`, `text`, `date_created`) VALUES
-(1, 1, 17, 'I think Euan is great ', '2025-05-22 20:34:15'),
-(3, 8, 1, 'Hume willl stay ', '2025-05-23 12:15:34'),
-(4, 9, 1, 'I LIKE THE THE TEAM!!!!', '2025-06-02 13:05:44'),
-(5, 3, 27, 'Euan thinks he is shocking\r\n\r\n\r\n', '2025-06-03 13:48:23'),
-(6, 3, 31, 'I Think hes really bad. My mate dave , top bloke from Alty , we go way back. He laughed his head of when he heard he was going to football league i shouted for god sake knowing we are signing another cheap player!!!\r\n', '2025-06-10 12:18:00');
 
 -- --------------------------------------------------------
 
@@ -83,7 +58,6 @@ CREATE TABLE `feedback` (
   `lastname` text NOT NULL,
   `username` text NOT NULL,
   `email` text NOT NULL,
-  `region` text NOT NULL,
   `subject` text NOT NULL,
   `date_written` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -92,14 +66,16 @@ CREATE TABLE `feedback` (
 -- Dumping data for table `feedback`
 --
 
-INSERT INTO `feedback` (`id`, `firstname`, `lastname`, `username`, `email`, `region`, `subject`, `date_written`) VALUES
-(1, 'Euan', 'Parry', 'Euan123', '123@gmail.com', 'United Kingdom', 'I hate this website', '2025-05-08 09:21:31'),
-(2, 'euan', 'parry', 'Enrol123', 'euan@gmail.com', 'United Kingdom', 'I don&#039;t like the about club page as it is empty!!!!!!!!!!!!!!!!!!!!!!!!!!!', '2025-05-22 10:49:11'),
-(3, 'Alexander', 'Parry', 'Enrol123', 'Egrparry28@gmail.com', 'USA', 'This website is insane ! The PHP master strikes again. ', '2025-05-22 19:43:17'),
-(4, 'Alexander', 'Parry', 'Enrol123', 'Egrparry28@gmail.com', 'USA', 'This website is insane ! The PHP master strikes again. ', '2025-05-22 19:44:50'),
-(5, 'Alexander', 'Parry', 'Enrol123', 'Egrparry28@gmail.com', 'USA', 'This website is insane ! The PHP master strikes again. ', '2025-05-22 19:45:06'),
-(6, 'Alexander', 'Parry', 'Enrol123', 'Egrparry28@gmail.com', 'USA', 'This website is insane ! The PHP master strikes again. ', '2025-05-22 19:45:50'),
-(7, 'Frazee', 'Harbess', 'FrazerGTFC', 'test@gmail.com', 'United Kingdom', 'This website is awful ', '2025-05-23 12:23:57');
+INSERT INTO `feedback` (`id`, `firstname`, `lastname`, `username`, `email`, `subject`, `date_written`) VALUES
+(1, 'Euan', 'Parry', 'Euan123', '123@gmail.com', 'I hate this website', '2025-05-08 09:21:31'),
+(2, 'euan', 'parry', 'Enrol123', 'euan@gmail.com', 'I don&#039;t like the about club page as it is empty!!!!!!!!!!!!!!!!!!!!!!!!!!!', '2025-05-22 10:49:11'),
+(3, 'Alexander', 'Parry', 'Enrol123', 'Egrparry28@gmail.com', 'This website is insane ! The PHP master strikes again. ', '2025-05-22 19:43:17'),
+(4, 'Alexander', 'Parry', 'Enrol123', 'Egrparry28@gmail.com', 'This website is insane ! The PHP master strikes again. ', '2025-05-22 19:44:50'),
+(5, 'Alexander', 'Parry', 'Enrol123', 'Egrparry28@gmail.com', 'This website is insane ! The PHP master strikes again. ', '2025-05-22 19:45:06'),
+(6, 'Alexander', 'Parry', 'Enrol123', 'Egrparry28@gmail.com', 'This website is insane ! The PHP master strikes again. ', '2025-05-22 19:45:50'),
+(7, 'Frazee', 'Harbess', 'FrazerGTFC', 'test@gmail.com', 'This website is awful ', '2025-05-23 12:23:57'),
+(8, 'Greg', 'Richard', 'thegreatone', 'greg@fishandchips.co.uk', 'This website design is cool ', '2026-02-09 14:57:48'),
+(9, 'Greg', 'Richard', 'thegreatone', 'greg@fishandchips.co.uk', 'This website design is cool ', '2026-02-09 15:19:34');
 
 -- --------------------------------------------------------
 
@@ -125,6 +101,27 @@ CREATE TABLE `guides` (
 INSERT INTO `guides` (`id`, `title`, `description`, `picture`, `content`, `username`, `time_created`, `comments`) VALUES
 (1, 'How to sell a player', 'Selling players is key for FM success!', 0x75706c6f6164732f53637265656e73686f7420323032362d30312d3039203134353832352e706e67, 'You sell players by pressing the accept transfer button. ', '', '2026-02-06 15:45:40', ''),
 (2, 'This is unreal', 'SHOCKING NEW UPDATE CHANGES EVERYTHING', 0x75706c6f6164732f53637265656e73686f7420323032352d30392d3232203130303335382e706e67, 'WONDERKIDS ARE EVERYWHERE ', '', '2026-02-09 09:34:31', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `guides_comments`
+--
+
+CREATE TABLE `guides_comments` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `guides_id` int(11) NOT NULL,
+  `text` text NOT NULL,
+  `date_created` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `guides_comments`
+--
+
+INSERT INTO `guides_comments` (`id`, `user_id`, `guides_id`, `text`, `date_created`) VALUES
+(1, 12, 2, 'De Rebot Le Paeri is the best wonderkid in the game no joke.', '2026-02-09 14:32:17');
 
 -- --------------------------------------------------------
 
@@ -157,17 +154,28 @@ INSERT INTO `news` (`id`, `title`, `description`, `picture`, `content`, `usernam
 -- --------------------------------------------------------
 
 --
--- Table structure for table `threads`
+-- Table structure for table `news_comments`
 --
 
-CREATE TABLE `threads` (
-  `thread_id` int(11) NOT NULL,
-  `thread_name` text NOT NULL,
-  `replies` text NOT NULL,
-  `likes` int(11) NOT NULL,
-  `date_created` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL
+CREATE TABLE `news_comments` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `news_id` int(11) NOT NULL,
+  `text` text NOT NULL,
+  `date_created` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `news_comments`
+--
+
+INSERT INTO `news_comments` (`id`, `user_id`, `news_id`, `text`, `date_created`) VALUES
+(1, 1, 17, 'I think Euan is great ', '2025-05-22 20:34:15'),
+(3, 8, 1, 'Hume willl stay ', '2025-05-23 12:15:34'),
+(4, 9, 1, 'I LIKE THE THE TEAM!!!!', '2025-06-02 13:05:44'),
+(5, 3, 27, 'Euan thinks he is shocking\r\n\r\n\r\n', '2025-06-03 13:48:23'),
+(6, 3, 31, 'I Think hes really bad. My mate dave , top bloke from Alty , we go way back. He laughed his head of when he heard he was going to football league i shouted for god sake knowing we are signing another cheap player!!!\r\n', '2025-06-10 12:18:00'),
+(7, 12, 32, 'This website is poor ', '2026-02-09 14:16:15');
 
 -- --------------------------------------------------------
 
@@ -188,7 +196,10 @@ CREATE TABLE `thread_replies` (
 --
 
 INSERT INTO `thread_replies` (`id`, `user_id`, `thread_id`, `text`, `date_created`) VALUES
-(1, 12, 1, 'This is way worse than FM24. ', '2026-02-09 13:42:19');
+(1, 12, 1, 'This is way worse than FM24. ', '2026-02-09 13:42:19'),
+(2, 12, 2, 'i think that frazer michael harness is the true adam \r\n', '2026-02-09 13:52:42'),
+(3, 12, 2, 'you idiot frazer is a 5\'9 ltn narrow clavicle manlet ', '2026-02-09 13:53:22'),
+(4, 12, 2, 'harry and jacob are true htn ', '2026-02-09 13:53:42');
 
 -- --------------------------------------------------------
 
@@ -232,12 +243,6 @@ INSERT INTO `users` (`id`, `username`, `password`, `firstname`, `lastname`, `ema
 --
 
 --
--- Indexes for table `comments`
---
-ALTER TABLE `comments`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `discussion_board`
 --
 ALTER TABLE `discussion_board`
@@ -256,16 +261,22 @@ ALTER TABLE `guides`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `guides_comments`
+--
+ALTER TABLE `guides_comments`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `news`
 --
 ALTER TABLE `news`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `threads`
+-- Indexes for table `news_comments`
 --
-ALTER TABLE `threads`
-  ADD PRIMARY KEY (`thread_id`);
+ALTER TABLE `news_comments`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `thread_replies`
@@ -284,12 +295,6 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT for table `comments`
---
-ALTER TABLE `comments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
 -- AUTO_INCREMENT for table `discussion_board`
 --
 ALTER TABLE `discussion_board`
@@ -299,7 +304,7 @@ ALTER TABLE `discussion_board`
 -- AUTO_INCREMENT for table `feedback`
 --
 ALTER TABLE `feedback`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `guides`
@@ -308,16 +313,28 @@ ALTER TABLE `guides`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT for table `guides_comments`
+--
+ALTER TABLE `guides_comments`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
+-- AUTO_INCREMENT for table `news_comments`
+--
+ALTER TABLE `news_comments`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
 -- AUTO_INCREMENT for table `thread_replies`
 --
 ALTER TABLE `thread_replies`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `users`
