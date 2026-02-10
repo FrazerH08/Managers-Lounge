@@ -97,7 +97,7 @@ $sql ="INSERT INTO guides (title, description, content , picture) VALUES ('$sani
     <?php
     if ($conn->query(query: $sql) === TRUE) {
         echo "<h1 class='title' >New record created successfully</h1>";
-        echo "<a href='listguides.php' style='display:block; text-align:center; class=btn'>Back to Guides</a>";
+        echo "<a class=btn href='listguides.php' style='display:block; text-align:center; '>Back to Guides</a>";
     } else{
         echo "Error: " . $sql ."<br>" . $conn->error;
     }

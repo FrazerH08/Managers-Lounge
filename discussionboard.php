@@ -97,8 +97,8 @@ if ($logged_in) {
 
                 if($role === 'admin'){
                     echo '<p>
-                        <a class =btn href="edit_news.php?id=' . htmlspecialchars($row['id']) . '">Edit</a> |
-                        <a class=btn onclick="return confirm(\'Do You Really Want To Delete This?\')" href="delete_news.php?id=' . htmlspecialchars($row['id']) . '">Delete</a>
+                        <a class =btn href="edit_thread.php?id=' . htmlspecialchars($row['id']) . '">Edit</a> |
+                        <a class=btn onclick="return confirm(\'Do You Really Want To Delete This?\')" href="delete_thread.php?id=' . htmlspecialchars($row['id']) . '">Delete</a>
                     </p>';
                 }
 
