@@ -70,7 +70,7 @@
         exit();
     } else {
         echo "<h1 class='title'>Invalid username or password</h1>";
-        echo "<a class='content-creatorbtn' href='javascript:self.history.back()'> Go Back</a>";
+        echo "<a class='btn' text-align:center href='javascript:self.history.back()'> Go Back</a>";
     }
 }
         ?>

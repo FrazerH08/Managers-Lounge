@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 11, 2026 at 12:13 AM
+-- Generation Time: Feb 15, 2026 at 12:39 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -43,7 +43,7 @@ CREATE TABLE `discussion_board` (
 --
 
 INSERT INTO `discussion_board` (`id`, `title`, `description`, `picture`, `content`, `username`, `time_created`, `comments`) VALUES
-(1, 'Why is FM26 so bad ', 'I think FM26 is awful!!!', 0x75706c6f6164732f53637265656e73686f7420323032352d30312d3036203130313435332e706e67, 'The game is bad this year , really bad ', '', '2026-02-09 09:51:39', '');
+(1, 'Why is FM26 so bad ', 'I think FM26 is awful!!!', 0x75706c6f6164732f4f49502e6a7067, 'The game is bad this year , really bad ', '', '2026-02-14 23:36:17', '');
 
 -- --------------------------------------------------------
 
@@ -98,8 +98,8 @@ CREATE TABLE `guides` (
 --
 
 INSERT INTO `guides` (`id`, `title`, `description`, `picture`, `content`, `username`, `time_created`, `comments`) VALUES
-(1, 'How to sell a player', 'Selling players is key for FM success!', 0x75706c6f6164732f53637265656e73686f7420323032362d30312d3039203134353832352e706e67, 'You sell players by pressing the accept transfer button. ', '', '2026-02-06 15:45:40', ''),
-(2, 'This is unreal', 'SHOCKING NEW UPDATE CHANGES EVERYTHING', 0x75706c6f6164732f53637265656e73686f7420323032352d30392d3232203130303335382e706e67, 'WONDERKIDS ARE EVERYWHERE ', '', '2026-02-09 09:34:31', '');
+(1, 'How to sell a player', 'Selling players is key for FM success!', 0x75706c6f6164732f53637265656e73686f7420323032362d30322d3134203233323733392e706e67, 'You sell players by pressing the accept transfer button. ', '', '2026-02-14 23:27:55', ''),
+(2, 'Wonderkids update is unreal', 'SHOCKING NEW UPDATE CHANGES EVERYTHING', 0x75706c6f6164732f53637265656e73686f7420323032362d30322d3134203233323434312e706e67, 'WONDERKIDS ARE EVERYWHERE ', '', '2026-02-14 23:26:03', '');
 
 -- --------------------------------------------------------
 
@@ -144,7 +144,6 @@ CREATE TABLE `news` (
 --
 
 INSERT INTO `news` (`id`, `title`, `description`, `picture`, `content`, `username`, `time_created`, `comments`) VALUES
-(32, 'Testing', 'This is great', 0x75706c6f6164732f53637265656e73686f7420323032362d30322d3036203130313934342e706e67, 'Love this website ', '', '2026-02-06 14:54:16', ''),
 (33, 'How FM26 is So Great', 'An Article on why Football Manager is so good ', 0x75706c6f6164732f464d32362e77656270, 'Football Manager continues to stay busy they&#039;re plenty of discussion across the community about updates, gameplay changes, and what fans want to see next. Recent patches have focused mainly on improving match realism,\r\n\r\nOne of the biggest talking points has been the match engine, with many players enjoying it because it is fresh and new , something different to previous editions.While it&rsquo;s not perfect, most fans agree that the game now feels more realistic.\r\n\r\nOne Negative is the fans are angry about the UI overall and miss the old FM24 style , its like marmite people either love or hate it. \r\n\r\nthe FM community remains as active as ever. From custom databases and face packs to tactical guides on YouTube, players are still finding new ways to keep the game fresh. \r\n\r\nOverall, Football Manager is in a solid place right now. While there are still improvements to be made, the ongoing updates and strong community support show why the series continues to be one of the most popular football simulation games out there.', '', '2026-02-10 20:43:07', '');
 
 -- --------------------------------------------------------
