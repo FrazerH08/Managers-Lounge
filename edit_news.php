@@ -33,11 +33,33 @@
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="edit_news.css">
     <link rel="stylesheet" href="feedback.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cambo&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cambo&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">   
 </head>
 <body>
+    <nav>
+        <ul>
+            <li>
+                <h1><a href="index.html">Managers Lounge</a></h1>
+            </li>
+            <li>
+                <h2><a href="listnews.php">Latest News</a></li>
+            </h2>
+            <li>
+                <h2><a href="listguides.php">Guides</a></li>
+            </h2>
+            <li>
+                <h2><a href="discussionboard.php">Discussion Board</a></li>
+            </h2>
+            <li>
+                <h2><a class="right-float" href="login.php">Login</a></li>
+            </h2>
+            <li>
+                <h2><a class="right-float" href="signup.php">Sign Up</a></li>
+            </h2>
+        </ul>
+    </nav>
 <h1><u>Edit News</u></h1>
 <form action="edit_news_validate.php" method="post" enctype="multipart/form-data">
         <input type="hidden" name="id" value="<?php echo $id;?>">
@@ -50,7 +72,7 @@
         <textarea name="content" id="content" cols="180" rows="26"><?php echo $content; ?></textarea>
         <br>
         <button type="submit" class="btn" onclick="alert('Thanks for submitting!')">Submit</button>
-        <label for="pictureup" class="custom-file-upload">Choose Image </label>
+        <label for="pictureup" class="btn">Choose Image </label>
         <input type="file" id="pictureup"name="fileToUpload">
     </form>
 </body>
