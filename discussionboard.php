@@ -95,7 +95,7 @@ if ($logged_in) {
                 }
                 echo '<p><a class=article-title href="retrieve_thread.php?id=' . htmlspecialchars($row['id']) . '">' .  '<b>', htmlspecialchars($row['title']) . '</b>' , '</a></p>';
 
-                if($role === 'admin'){
+                if($logged_in){
                     echo '<p>
                         <a class =btn href="edit_thread.php?id=' . htmlspecialchars($row['id']) . '">Edit</a> |
                         <a class=btn onclick="return confirm(\'Do You Really Want To Delete This?\')" href="delete_thread.php?id=' . htmlspecialchars($row['id']) . '">Delete</a>
