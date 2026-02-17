@@ -97,7 +97,7 @@ $sql ="INSERT INTO news (title, description, content , picture) VALUES ('$saniti
     <?php
     if ($conn->query(query: $sql) === TRUE) {
         echo "<h1 class='title' >New record created successfully</h1>";
-        echo "<a href='listnews.php' style='display:block; text-align:center; class=btn'>Back to news</a>";
+        echo "<a class=btn href='listnews.php' text-align:center '>Back to news</a>";
     } else{
         echo "Error: " . $sql ."<br>" . $conn->error;
     }
