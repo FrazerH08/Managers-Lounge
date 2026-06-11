@@ -41,6 +41,10 @@
         position: relative;
         width: 100%;
         top: 0;
+        border: 1px solid #D18EFB;
+        border-radius: 5px;
+        padding: 20px;
+        ;
     }
     
     .header_content {
