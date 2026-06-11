@@ -1,18 +1,113 @@
-body {
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-    background-color: #202537;
-    color: #FFFFFF;
-}
-
-/* Reduce size of element if below 900 */
-@media screen and (max-width: 1285px) {
+    body {
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: weight;
+        font-style: normal;
+        background-color: #202537;
+        color: #FFFFFF;
+    }
+    
+    * {
+        box-sizing: border-box;
+    }
+    
+    nav {
+        /* background-color: #060612; */
+        /* background-color: #000E10; */
+        margin: 0;
+        padding: 0;
+    }
+    
+    ul {
+        list-style: none;
+    }
+    
+    .nav {
+        transition: all 0.4s ease-in-out;
+    }
+    
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    .logo {
+        /* background-color: #060612; */
+        color: #D2D2D2;
+        font-size: 26px;
+    }
+    
+    .header {
+        position: relative;
+        width: 100%;
+        top: 0;
+    }
+    
+    .header_content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 30px;
+        min-height: 60px;
+    }
+    
+    .nav_list {
+        display: flex;
+        column-gap: 40px;
+    }
+    
+    .nav_link:hover,
+    .nav_link:focus {
+        color: #316E74;
+    }
+    
+    .nav_item {}
+    
+    .nav_link {
+        color: #D2D2D2;
+        font-size: 20px;
+        transition: all 0.4s;
+    }
+    
+    .hamburger {
+        display: none;
+        /* Shows only on mobile */
+        cursor: pointer;
+    }
+    
+    .bar {
+        height: 2px;
+        width: 27px;
+        background-color: #fff;
+        margin: 5px 0;
+        opacity: 0.8;
+        transition: all 0.4s ease-in-out;
+    }
+    
+    .nav--open {
+        transform: translateX(0) !important;
+    }
+    
+    .hamburger--open .bar:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .hamburger--open .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger--open .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+    /* Reduce size of element if below 900 */
+    /* @media screen and (max-width: 1285px) {
     h2  {
       font-size: smaller;
     }
   }
+
+
+
 nav a:hover {
     color: #D18EFB;
     text-decoration: underline;
@@ -47,122 +142,182 @@ li a {
     text-align: center;
     padding: 15px 20px;
     margin: 20px;
-}
-
-h2 {
-    font-weight: 300;
-}
-
-.title {
-    text-align: center;
-}
-
-.opening-paragraph {
-    text-align: center;
-}
-
-.btn a {
-    text-decoration: none;
-}
-
-.container {
-    display: grid;
-    column-gap: 10px;
-    grid-template-columns: auto auto;
-    background-color: none;
-    padding: 10px;
-}
-
-.container div {
-    padding: 20px;
-    font-size: 30px;
-    text-align: center;
-}
-
-.btn {
-    border: 3px solid #D18EFB;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    padding: 10px 24px;
-    color: #FFFFFF;
-    transition-duration: 0.4s;
-    font-weight: bold;
-}
-
-.btn:hover {
-    background-color: #D18EFB;
-}
-
-footer {
-    border: 3px solid #D18EFB;
-    padding: 10px;
-    font-size: larger;
-}
-
-footer a {
-    color: white;
-}
-
-.test-img {
-    border-radius: 5px;
-    border-color: 3px solid #D18EFB;
-}
-
-.box {
-    border: 3px solid #D18EFB;
-    font-size: large;
-    padding: 0.5%;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-}
-
-.signupbtn {
-    border: 3px solid #D18EFB;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    padding: 10px 68px;
-    color: #FFFFFF;
-    transition-duration: 0.4s;
-    background-color: #202537;
-    font-size: large;
-}
-
-.signupbtn:hover{
-    background-color: #D18EFB;
-}
-
-a{
-    color: white ;
+} */
     
-}
-
-.accvalid{
-    text-align: center;
-}
-
-button {
-    font-family: "Montserrat", sans-serif;
-    border: 3px solid #D18EFB;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    padding: 10px 24px;
-    color: #FFFFFF;
-    transition-duration: 0.4s;
-    font-weight: bold;
-    background-color: #202537;
+    h2 {
+        font-weight: 300;
     }
-button:hover {
-    background-color: #D18EFB;
+    
+    .title {
+        text-align: center;
     }
-
-
-#pictureup {
-    display: none;
-}
-
+    
+    .opening-paragraph {
+        text-align: center;
+    }
+    
+    .btn a {
+        text-decoration: none;
+    }
+    
+    .container {
+        display: grid;
+        column-gap: 10px;
+        grid-template-columns: auto auto;
+        background-color: none;
+        padding: 10px;
+    }
+    
+    .container img {
+        max-width: 400px;
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+    
+    .container div {
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+    }
+    
+    .btn {
+        border: 3px solid #D18EFB;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        padding: 10px 24px;
+        color: #FFFFFF;
+        transition-duration: 0.4s;
+        font-weight: bold;
+    }
+    
+    .btn:hover {
+        background-color: #D18EFB;
+    }
+    
+    footer {
+        border: 3px solid #D18EFB;
+        padding: 10px;
+        font-size: larger;
+    }
+    
+    footer a {
+        color: white;
+    }
+    
+    .test-img {
+        border-radius: 5px;
+        border-color: 3px solid #D18EFB;
+    }
+    
+    .box {
+        border: 3px solid #D18EFB;
+        font-size: large;
+        padding: 0.5%;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+    }
+    
+    .signupbtn {
+        border: 3px solid #D18EFB;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        padding: 10px 68px;
+        color: #FFFFFF;
+        transition-duration: 0.4s;
+        background-color: #202537;
+        font-size: large;
+    }
+    
+    .signupbtn:hover {
+        background-color: #D18EFB;
+    }
+    
+    a {
+        color: white;
+    }
+    
+    .accvalid {
+        text-align: center;
+    }
+    
+    button {
+        font-family: "Montserrat", sans-serif;
+        border: 3px solid #D18EFB;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        padding: 10px 24px;
+        color: #FFFFFF;
+        transition-duration: 0.4s;
+        font-weight: bold;
+        background-color: #202537;
+    }
+    
+    button:hover {
+        background-color: #D18EFB;
+    }
+    
+    #pictureup {
+        display: none;
+    }
+    
+    @media (max-width: 1000px) {
+        .nav_link {
+            font-size: 15px;
+        }
+    }
+    
+    @media (max-width: 735px) {
+        .header {
+            position: sticky;
+            z-index: 100;
+        }
+        .nav {
+            position: fixed;
+            top: 60px;
+            left: 0;
+            background-color: #202537;
+            width: 100%;
+            padding: 10px 0 25px;
+            transform: translateX(-100%);
+        }
+        .nav_list {
+            flex-direction: column;
+            align-items: center;
+            row-gap: 80px;
+        }
+        .nav_link {
+            font-size: 18px;
+        }
+        .nav_link:hover,
+        .nav_link:focus {
+            color: #316E74;
+            text-decoration: underline;
+        }
+        .hamburger {
+            display: block;
+            cursor: pointer;
+        }
+        .logo {
+            font-size: 18px;
+        }
+        .container {
+            grid-template-columns: auto;
+        }
+        body.menu-open {
+            overflow: hidden;
+            background-color: #202537;
+        }
+        body.menu-open>*:not(.header) {
+            filter: blur(5px);
+            transition: filter 0.4s ease-in-out;
+        }
+    }
