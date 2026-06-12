@@ -36,30 +36,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cambo&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">   
+    <script src="nav.js" defer></script>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li>
-                <h1><a href="index.html">Managers Lounge</a></h1>
-            </li>
-            <li>
-                <h2><a href="listnews.php">Latest News</a></li>
-            </h2>
-            <li>
-                <h2><a href="listguides.php">Guides</a></li>
-            </h2>
-            <li>
-                <h2><a href="discussionboard.php">Discussion Board</a></li>
-            </h2>
-            <li>
-                <h2><a class="right-float" href="login.php">Login</a></li>
-            </h2>
-            <li>
-                <h2><a class="right-float" href="signup.php">Sign Up</a></li>
-            </h2>
-        </ul>
-    </nav>
+    <header class="header">
+        <div class="header_content">
+            <a href="index.html" class="logo">Managers Lounge</a>
+            <nav class="nav">
+                <ul class="nav_list">
+                    <li class="nav_item"> <a href="listnews.php" class="nav_link">News</a></li>
+                    <li class="nav_item"> <a href="listguides.php" class="nav_link">Guides</a></li>
+                    <li class="nav_item"> <a href="discussionboard.php" class="nav_link">Discussion Board</a></li>
+                    <li class="nav_item" id="login"> <a href="login.php" class="nav_link">Login</a></li>
+                    <li class="nav_item"> <a href="signup.php" class="nav_link">Sign up</a></li>
+                    <li class="nav_item"> <a href="feedback.php" class="nav_link">Feedback</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </header>
 <h1><u>Edit Guides</u></h1>
 <form action="edit_guides_validate.php" method="post" enctype="multipart/form-data">
         <input type="hidden" name="id" value="<?php echo $id;?>">

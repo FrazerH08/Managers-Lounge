@@ -62,7 +62,7 @@
     
     .nav_link:hover,
     .nav_link:focus {
-        color: #316E74;
+        color: #D18EFB;
     }
     
     .nav_item {}
@@ -303,7 +303,7 @@ li a {
         }
         .nav_link:hover,
         .nav_link:focus {
-            color: #316E74;
+            color: #D18EFB;
             text-decoration: underline;
         }
         .hamburger {
