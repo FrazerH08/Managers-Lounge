@@ -9,48 +9,71 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cambo&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="nav.js" defer></script>
+
 </head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="nav.js" defer></script>
+
 </head>
 <body>
-    <nav>
-        <ul>
-            <li>
-                <h1><a href="index.html">Managers Lounge</a></h1>
-            </li>
-            <li>
-                <h2><a href="index.html">Latest News</a></li>
-            </h2>
-            <li>
-                <h2><a href="listguides.php">Guides</a></li>
-            </h2>
-            <li>
-                <h2><a href="discussionboard.php">Discussion Board</a></li>
-            </h2>
-            <li>
-                <h2><a class="right-float" href="login.php">Login</a></li>
-            </h2>
-            <li>
-                <h2><a class="right-float" href="signup.php">Sign Up</a></li>
-            </h2>
-        </ul>
-    </nav>
-<h1 class="title"><u>Login</u></h1>
-<form class="login-form" action="login_validation.php" method='POST'>
-        <br> <label class="labels" for="username"><b>Username:</b></label>
-        <input type="text" class="box"placeholder="Enter Username" name="username" required> <br>
-        <br> <br> <label class="labels" for="password"><b>Password:</b></label>
-        <input type="password" class="box" placeholder="Enter Password" name="password" required>
-        <label class="labels">
-      <br> <input type="checkbox" class="remember-me" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-        </label>
-        <div class="next">
-            <button type="submit" name= "submit" value="submit" class="signupbtn" >Login</button>
+<header class="header">
+        <div class="header_content">
+            <a href="index.html" class="logo">Managers Lounge</a>
+            <nav class="nav">
+                <ul class="nav_list">
+                    <li class="nav_item"> <a href="listnews.php" class="nav_link">News</a></li>
+                    <li class="nav_item"> <a href="listguides.php" class="nav_link">Guides</a></li>
+                    <li class="nav_item"> <a href="discussionboard.php" class="nav_link">Discussion Board</a></li>
+                    <li class="nav_item" id="login"> <a href="login.php" class="nav_link">Login</a></li>
+                    <li class="nav_item"> <a href="signup.php" class="nav_link">Sign up</a></li>
+                    <li class="nav_item"> <a href="feedback.php" class="nav_link">Feedback</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
         </div>
-    </form>
-
-    <p>If you don't have an account already then please <a href="signup.php"> Sign up </a> to improve your experience.</p>
+    </header>
+<section class="section">
+    <div class="wrapper">
+        <div class="logreg-box">
+            <div class="form-box login">
+                <div class="logreg-title">
+                    <h2 class="title">Access your account</h2>
+                    <p> Your Road to <b>Survival</b> <br> starts here. </p>
+                </div>
+        <form class="login-form" action="login_validation.php" method='POST'>
+                <div class="input-box">
+                    <span class="icon"><i class="bx bx-user"></i></span>
+                    <input type="text" class="box" name="username" required>
+                    <!-- placeholder="Enter Username" -->
+                    <label class="labels" for="username"><b>Username:</b></label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><i class="bx bx-lock"></i></span>
+                    <input type="password" class="box"  name="password" required>
+                    <!-- placeholder="Enter Password" -->
+                    <label class="labels" for="password"><b>Password:</b></label>
+                </div>
+                <div class="remember-forgot">
+                    <label class="labels"><input type="checkbox" class="remember-me" checked="checked" name="remember"> Remember me</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <div class="next">
+                    <button type="submit" name= "submit" value="submit" class="btn" >Login</button>
+                </div>
+                <div class="logreg-link">
+                    <p>If you haven't already, <br> <a href="signup.php">Sign up</a></p>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+</section>
     <?php
     if(isset($_POST['submit'])){
         $username =mysqli_real_escape_string($conn,$_POST['username']);
@@ -75,5 +98,32 @@
     }else{
     }
     ?>
+    <footer>
+        <div class="f-container">
+            <div class="footer-content">
+                <h3>Contact Us</h3>
+                <p>Email: citizensroadtosurvival@gmail.com</p>
+            </div>
+            <div class="footer-content">
+                <h3> Quick links</h3>
+                <ul class="f-list">
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="dashboard.php">Dashboard</a></li>
+                    <li><a href="feedback.php">Feedback</a></li>
+                </ul>
+            </div>
+            <div class="footer-content">
+                <h3>Follow Us</h3>
+                <ul class="social-icons">
+                    <li><a href="https://x.com/Citizens_RoadTS"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/citizensroadtosurvival/"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <p>This is a fictional student website.</p>
+        </div>
+    </footer>
 </body>
 </html>

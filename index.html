@@ -9,20 +9,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cambo&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="nav.js" defer></script>
+
     <style>
         .opening-message {
             text-align: center;
             margin: 40px 0;
             font-size: 22px;
         }
-        footer a {
-            text-decoration:underline;
-        }
-        footer a:hover{
+        /* footer a {
+            text-decoration: underline;
+            transition: all 0.4s ease;
+        } */
+        /* footer a:hover {
             text-decoration: underline;
             color: #D18EFB;
-        }
+        } */
     </style>
 </head>
 
@@ -82,9 +85,31 @@
 
     </div>
     <footer>
-        <p class="footer-content">
-            <p>Please note that you have to <a href="signup.php">Sign up</a> and <a href="login.php">Log in </a>to comment.<br> <br> Please leave <a href="feedback.php">Feedback</a> if possible , it can help improve the website! </p>
-        </p>
+        <div class="f-container">
+            <div class="footer-content">
+                <h3>Contact Us</h3>
+                <p>Email: citizensroadtosurvival@gmail.com</p>
+            </div>
+            <div class="footer-content">
+                <h3> Quick links</h3>
+                <ul class="f-list">
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="dashboard.php">Dashboard</a></li>
+                    <li><a href="feedback.php">Feedback</a></li>
+                </ul>
+            </div>
+            <div class="footer-content">
+                <h3>Follow Us</h3>
+                <ul class="social-icons">
+                    <li><a href="https://x.com/Citizens_RoadTS"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/citizensroadtosurvival/"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <p>This is a fictional student website.</p>
+        </div>
     </footer>
 </body>
 
