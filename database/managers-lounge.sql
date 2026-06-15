@@ -181,10 +181,10 @@ INSERT INTO `news_comments` (`id`, `user_id`, `news_id`, `text`, `date_created`)
 -- --------------------------------------------------------
 
 --
--- Table structure for table `thread_replies`
+-- Table structure for table `ml_thread_replies`
 --
 
-CREATE TABLE `thread_replies` (
+CREATE TABLE `ml_thread_replies` (
   `id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `thread_id` int(11) NOT NULL,
@@ -193,10 +193,10 @@ CREATE TABLE `thread_replies` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `thread_replies`
+-- Dumping data for table `ml_thread_replies`
 --
 
-INSERT INTO `thread_replies` (`id`, `user_id`, `thread_id`, `text`, `date_created`) VALUES
+INSERT INTO `ml_thread_replies` (`id`, `user_id`, `thread_id`, `text`, `date_created`) VALUES
 (1, 12, 1, 'This is way worse than FM24. ', '2026-02-09 13:42:19'),
 (2, 12, 2, 'i think that frazer michael harness is the true adam \r\n', '2026-02-09 13:52:42'),
 (3, 12, 2, 'you idiot frazer is a 5\'9 ltn narrow clavicle manlet ', '2026-02-09 13:53:22'),
@@ -206,10 +206,10 @@ INSERT INTO `thread_replies` (`id`, `user_id`, `thread_id`, `text`, `date_create
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Table structure for table `ml_users`
 --
 
-CREATE TABLE `users` (
+CREATE TABLE `ml_users` (
   `id` int(11) NOT NULL,
   `username` text NOT NULL,
   `password` text NOT NULL,
@@ -224,10 +224,10 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `users`
+-- Dumping data for table `ml_users`
 --
 
-INSERT INTO `users` (`id`, `username`, `password`, `firstname`, `lastname`, `email`, `bio`, `profile_pic`, `status`, `birthdate`, `role`) VALUES
+INSERT INTO `ml_users` (`id`, `username`, `password`, `firstname`, `lastname`, `email`, `bio`, `profile_pic`, `status`, `birthdate`, `role`) VALUES
 (1, 'FrazerGTFC', '$2y$10$EwvAmv/0GzWsB86V5ffUTecwJp3ehOCYM8nCSIJenXjPcBDaOHfMO', 'Frazer   ', 'Harness   ', 'frazergtfc9@outlook.com', 'Hello Euan Parry This is my blogsite', 0x636f6c652070616c6d65722e6a7067, 'active', '2008-06-07', 'admin'),
 (3, 'EuanParry123', '$2y$10$n3SxG/5GD1EkA0xw.KanxeMMBZBDL6aYifWk6X/IH1GGTDLWk9jdG', 'Euan      ', 'Pazza      ', 'euan@gmail.com', 'I hate Frazer and Harry', 0x70616c6d65722e6a7067, 'active', '2020-01-07', 'user'),
 (4, 'harold1234', '$2y$10$76PrL2sPvomrdLcM4ROCY.O4Hvp7pHd38QS/gTZlFJOn63q77fBNe', 'harry', 'barker', 'HAROLd123@gmail.com', '', '', 'active', '2007-08-13', 'user'),
@@ -282,15 +282,15 @@ ALTER TABLE `news_comments`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `thread_replies`
+-- Indexes for table `ml_thread_replies`
 --
-ALTER TABLE `thread_replies`
+ALTER TABLE `ml_thread_replies`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `users`
+-- Indexes for table `ml_users`
 --
-ALTER TABLE `users`
+ALTER TABLE `ml_users`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -334,15 +334,15 @@ ALTER TABLE `news_comments`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT for table `thread_replies`
+-- AUTO_INCREMENT for table `ml_thread_replies`
 --
-ALTER TABLE `thread_replies`
+ALTER TABLE `ml_thread_replies`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT for table `ml_users`
 --
-ALTER TABLE `users`
+ALTER TABLE `ml_users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 

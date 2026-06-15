@@ -120,7 +120,7 @@
         </div>
         <p> Already have an account? <a href="login.php"> Log in now</a></p>
     </form> -->
-    <footer>
+        <footer>
         <div class="f-container">
             <div class="footer-content">
                 <h3>Contact Us</h3>
@@ -129,9 +129,10 @@
             <div class="footer-content">
                 <h3> Quick links</h3>
                 <ul class="f-list">
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="dashboard.php">Dashboard</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="listnews.php">News</a></li>
+                    <li><a href="listguides.php">Guides</a></li>
+                    <li><a href="discussionboard.php">Discussion Board</a></li>
                     <li><a href="feedback.php">Feedback</a></li>
                 </ul>
             </div>
@@ -144,7 +145,7 @@
             </div>
         </div>
         <div class="bottom-bar">
-            <p>This is a fictional student website.</p>
+            <p>This is a student website.</p>
         </div>
     </footer>
 </body>

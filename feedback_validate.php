@@ -14,28 +14,26 @@
 
 </head>
 <body>
-<nav>
-        <ul>
-            <li>
-                <h1><a href="index.html">Managers Lounge</a></h1>
-            </li>
-            <li>
-                <h2><a href="listnews.php">Latest News</a></li>
-            </h2>
-            <li>
-                <h2><a href="listguides.php">Guides</a></li>
-            </h2>
-            <li>
-                <h2><a href="discussionboard.php">Discussion Board</a></li>
-            </h2>
-            <li>
-                <h2><a class="right-float" href="login.php">Login</a></li>
-            </h2>
-            <li>
-                <h2><a class="right-float" href="signup.php">Sign Up</a></li>
-            </h2>
-        </ul>
-    </nav>
+<header class="header">
+        <div class="header_content">
+            <a href="index.html" class="logo">Managers Lounge</a>
+            <nav class="nav">
+                <ul class="nav_list">
+                    <li class="nav_item"> <a href="listnews.php" class="nav_link">News</a></li>
+                    <li class="nav_item"> <a href="listguides.php" class="nav_link">Guides</a></li>
+                    <li class="nav_item"> <a href="discussionboard.php" class="nav_link">Discussion Board</a></li>
+                    <li class="nav_item" id="login"> <a href="login.php" class="nav_link">Login</a></li>
+                    <li class="nav_item"> <a href="signup.php" class="nav_link">Sign up</a></li>
+                    <li class="nav_item"> <a href="feedback.php" class="nav_link">Feedback</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </header>
 <?php
 include 'connectdb.php';
 $firstname = $_POST['firstname'];
@@ -63,7 +61,7 @@ if($stmt->execute()) {
     echo  "Error: " . $sql ."<br>" . $conn->error;
 }
 ?>
-    <footer>
+        <footer>
         <div class="f-container">
             <div class="footer-content">
                 <h3>Contact Us</h3>
@@ -72,9 +70,10 @@ if($stmt->execute()) {
             <div class="footer-content">
                 <h3> Quick links</h3>
                 <ul class="f-list">
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="dashboard.php">Dashboard</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="listnews.php">News</a></li>
+                    <li><a href="listguides.php">Guides</a></li>
+                    <li><a href="discussionboard.php">Discussion Board</a></li>
                     <li><a href="feedback.php">Feedback</a></li>
                 </ul>
             </div>
@@ -87,7 +86,7 @@ if($stmt->execute()) {
             </div>
         </div>
         <div class="bottom-bar">
-            <p>This is a fictional student website.</p>
+            <p>This is a student website.</p>
         </div>
     </footer>
 </body>

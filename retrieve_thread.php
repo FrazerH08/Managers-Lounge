@@ -91,8 +91,8 @@ if (isset($_SESSION['user_id'])){
 }
 
 $commentQuery = "SELECT t.text, t.date_created, u.username
-                 FROM thread_replies t
-                 JOIN users u ON t.user_id = u.id
+                 FROM ml_thread_replies t
+                 JOIN ml_users u ON t.user_id = u.id
                  WHERE t.thread_id = ?
                  ORDER BY t.date_created ASC";
 $commentStmt = $conn->prepare($commentQuery);
@@ -106,14 +106,14 @@ while ($comment = $commentResult->fetch_assoc()) {
     echo "<div class='comment-box'>";
     echo "<strong>" . htmlspecialchars($comment['username']) . "</strong><br>";
     echo "<p>" . nl2br(htmlspecialchars($comment['text'])) . "</p>";
-    echo "<small>" . $comment['date_created'] . "</small>";
+echo "<small>". date("F j, Y, g:i a", strtotime($comment['date_created'])) . "</small>";
     echo "</div><hr>";
 }
 echo '</section>';
 $stmt->close();
 $conn->close();
 ?>
-    <footer>
+        <footer>
         <div class="f-container">
             <div class="footer-content">
                 <h3>Contact Us</h3>
@@ -122,9 +122,10 @@ $conn->close();
             <div class="footer-content">
                 <h3> Quick links</h3>
                 <ul class="f-list">
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="dashboard.php">Dashboard</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="listnews.php">News</a></li>
+                    <li><a href="listguides.php">Guides</a></li>
+                    <li><a href="discussionboard.php">Discussion Board</a></li>
                     <li><a href="feedback.php">Feedback</a></li>
                 </ul>
             </div>
@@ -137,7 +138,7 @@ $conn->close();
             </div>
         </div>
         <div class="bottom-bar">
-            <p>This is a fictional student website.</p>
+            <p>This is a student website.</p>
         </div>
     </footer>
 </body>

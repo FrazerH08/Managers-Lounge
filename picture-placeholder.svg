@@ -6,7 +6,7 @@
 <line x1="20.3986" y1="17.6981" x2="326.399" y2="421.698" stroke="#D18EFB"/>
 <line x1="19.6014" y1="421.698" x2="325.601" y2="17.6981" stroke="#D18EFB"/>
 <defs>
-<filter id="filter0_d_25_108" x="0" y="0" width="339.544" height="445" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_d_25_108" x="0" y="0" width="339.544" height="445" filterUnits="ml_userspaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dy="4"/>

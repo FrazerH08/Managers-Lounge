@@ -24,7 +24,7 @@ session_start();
     $thread_id = $_POST['thread_id'];
     $text = $_POST['text'];
 
-    $sql = "INSERT INTO thread_replies (user_id, thread_id , text) VALUES (?,?,?)";
+    $sql = "INSERT INTO ml_thread_replies (user_id, thread_id , text) VALUES (?,?,?)";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("iis", $user_id , $thread_id, $text);
      if ($stmt->execute()) {
@@ -34,7 +34,7 @@ session_start();
         echo "Error: " . $stmt->error;
     }
     ?>
-    <footer>
+        <footer>
         <div class="f-container">
             <div class="footer-content">
                 <h3>Contact Us</h3>
@@ -43,9 +43,10 @@ session_start();
             <div class="footer-content">
                 <h3> Quick links</h3>
                 <ul class="f-list">
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="dashboard.php">Dashboard</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="listnews.php">News</a></li>
+                    <li><a href="listguides.php">Guides</a></li>
+                    <li><a href="discussionboard.php">Discussion Board</a></li>
                     <li><a href="feedback.php">Feedback</a></li>
                 </ul>
             </div>
@@ -58,7 +59,7 @@ session_start();
             </div>
         </div>
         <div class="bottom-bar">
-            <p>This is a fictional student website.</p>
+            <p>This is a student website.</p>
         </div>
     </footer>
 </body>

@@ -103,7 +103,7 @@ $sql ="INSERT INTO news (title, description, content , picture) VALUES ('$saniti
         echo "Error: " . $sql ."<br>" . $conn->error;
     }
     ?>
-    <footer>
+        <footer>
         <div class="f-container">
             <div class="footer-content">
                 <h3>Contact Us</h3>
@@ -112,9 +112,10 @@ $sql ="INSERT INTO news (title, description, content , picture) VALUES ('$saniti
             <div class="footer-content">
                 <h3> Quick links</h3>
                 <ul class="f-list">
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="dashboard.php">Dashboard</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="listnews.php">News</a></li>
+                    <li><a href="listguides.php">Guides</a></li>
+                    <li><a href="discussionboard.php">Discussion Board</a></li>
                     <li><a href="feedback.php">Feedback</a></li>
                 </ul>
             </div>
@@ -127,7 +128,7 @@ $sql ="INSERT INTO news (title, description, content , picture) VALUES ('$saniti
             </div>
         </div>
         <div class="bottom-bar">
-            <p>This is a fictional student website.</p>
+            <p>This is a student website.</p>
         </div>
     </footer>
 </body>

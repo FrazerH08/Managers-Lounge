@@ -102,7 +102,7 @@ if (strlen($password) <8) {
 }
 
         // Check if email already exists
-        $stmt = $conn->prepare("SELECT email FROM users WHERE email = ?");
+        $stmt = $conn->prepare("SELECT email FROM ml_users WHERE email = ?");
         $stmt->bind_param("s", $email);
         $stmt->execute();
         $result = $stmt->get_result();
@@ -115,7 +115,7 @@ if (strlen($password) <8) {
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
             // Insert new user into db
-            $insert_stmt = $conn->prepare("INSERT INTO users (username, email, password, firstname, lastname, birthdate ) VALUES (?, ?, ?, ?, ?, ?)");
+            $insert_stmt = $conn->prepare("INSERT INTO ml_users (username, email, password, firstname, lastname, birthdate ) VALUES (?, ?, ?, ?, ?, ?)");
             $insert_stmt->bind_param("ssssss", $username, $email, $hashed_password, $firstname, $lastname, $birthdate );
 
             if($insert_stmt->execute()){
@@ -129,7 +129,7 @@ if (strlen($password) <8) {
         echo '</div>';
         ?>
 
-    <footer>
+        <footer>
         <div class="f-container">
             <div class="footer-content">
                 <h3>Contact Us</h3>
@@ -138,9 +138,10 @@ if (strlen($password) <8) {
             <div class="footer-content">
                 <h3> Quick links</h3>
                 <ul class="f-list">
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="dashboard.php">Dashboard</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="listnews.php">News</a></li>
+                    <li><a href="listguides.php">Guides</a></li>
+                    <li><a href="discussionboard.php">Discussion Board</a></li>
                     <li><a href="feedback.php">Feedback</a></li>
                 </ul>
             </div>
@@ -153,7 +154,7 @@ if (strlen($password) <8) {
             </div>
         </div>
         <div class="bottom-bar">
-            <p>This is a fictional student website.</p>
+            <p>This is a student website.</p>
         </div>
     </footer>
 </body>
