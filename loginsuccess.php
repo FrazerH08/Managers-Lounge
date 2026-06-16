@@ -54,7 +54,7 @@ $username = $_SESSION['username'] ?? 'Guest';
 <h2>Welcome <?php echo htmlspecialchars($username); ?>, <br> <br> Your login was successful <br> <br> Enjoy the features you now have being a member! </h2> 
     <?php
     if($role === 'admin'){
-        echo " As You are an admin you can delete news, edit news and post articles and same with guides , here is the links to do so " ?> <br> <a class='content-creatorbtn' href="admin_management.php">Admin Management</a><br> <br> <br> <br> <br> <br> <?php
+        echo " As You are an admin you can delete news, edit news and post articles and same with guides , <br> <br> You can also delete comments and posts on the discussion board. <br> <br> Enjoy your stay Admin! ";
     }?>
 </div>
 <br> <br> <a class='btn' href="index.html">Home</a>
